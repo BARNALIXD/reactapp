@@ -1,22 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
-function Hello(props) {
-  return <h1>Hello World!</h1>;
-}
-
-const container = document.getElementById("root");
-const root = ReactDOM.createRoot(container);
-root.render(<Hello />);
-
-
-//class in ES6
 class Car {
-  constructor(name){
+  constructor(name) {
     this.brand = name;
+  }
+  //create a method named "present"
+  present () {
+    return 'I have a ' + this.brand;
   }
 }
 
-// object in react es6
 const mycar = new Car("ford");
-
+mycar.present();
