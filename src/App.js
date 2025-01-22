@@ -13,6 +13,6 @@ root.render(<Hello />);
 //class in ES6
 class Car {
   constructor(name){
-    this.name = name;
+    this.brand = name;
   }
 }
