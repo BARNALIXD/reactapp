@@ -16,3 +16,7 @@ class Car {
     this.brand = name;
   }
 }
+
+// object in react es6
+const mycar = new Car("ford");
+
