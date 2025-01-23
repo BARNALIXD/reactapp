@@ -1,24 +1,21 @@
-function MissedGoal(){
-  return <h1>MISSED!  </h1>;
+
+//Another way to conditionally render a React component is by using the && operator.
+
+function Garage(props) {
+  const cars = props.cars;
+  return (
+    <>
+      <h1>Garage</h1>
+      {cars.length > 0 &&
+        <h2>
+          You have {cars.length} cars in your garage.
+        </h2>
+      }
+    </>
+  );
 }
 
-function MadeGoal(){
-  return <h1>Goal!  </h1>;
-}
-
-
-
-function Goal (props) {
-  const isGoal = props.isGoal;
-  if(isGoal) {
-    return <Madegoal/>;
-  }
-  return <Notmadegoal/>;
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Goal isGoal={false} />);
-
-//const root = ReactDOM.createRoot(document.getElementById('root'));
-//root.render(<Goal isGoal={true} />);
+const cars = ['Ford', 'BMW', 'Audi'];
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Garage cars={cars} />);
 
