@@ -17,4 +17,8 @@ function Goal (props) {
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(" Goal");
+root.render(<Goal isGoal={false} />);
+
+//const root = ReactDOM.createRoot(document.getElementById('root'));
+//root.render(<Goal isGoal={true} />);
+
