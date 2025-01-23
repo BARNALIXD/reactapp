@@ -10,3 +10,5 @@ function Football() {
 
 const root = ReactDOM.createElement(document.getElementById("root"));
 root.render (<Football  />);
+
+//put the shoot function in the football component
