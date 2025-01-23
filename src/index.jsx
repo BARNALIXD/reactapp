@@ -1,18 +1,20 @@
-function Football() {
-    const shoot = (a, b) => {
-      alert(b.type);
-      /*
-      'b' represents the React event that triggered the function,
-      in this case the 'click' event
-      */
-    }
-  
-    return (
-      <button onClick={(event) => shoot("Goal!", event)}>Take the shot!</button>
-    );
-  }
-  
-  const root = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<Football />);
+function MissedGoal(){
+  return <h1>MISSED!  </h1>;
+}
 
-  //Arrow Function: Sending the event object manually:
+function MadeGoal(){
+  return <h1>Goal!  </h1>;
+}
+
+
+
+function Goal (props) {
+  const isGoal = props.isGoal;
+  if(isGoal) {
+    return <Madegoal/>;
+  }
+  return <Notmadegoal/>;
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(" Goal");
